@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-material_ui-boilerplate",
+  "name": "pals",
   "version": "1.0.0",
-  "description": "A boilerplate for React + Redux + Material UI + ES6 syntax application",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/takanabe/react-redux-material_ui-boilerplate.git"
+    "url": ""
   },
   "keywords": [
     "React",
@@ -19,10 +19,10 @@
     "Bable",
     "ES6"
   ],
-  "author": "https://github.com/takanabe",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/takanabe/react-redux-material_ui-boilerplate/issues"
+    "url": ""
   },
   "homepage": "",
   "devDependencies": {

@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 import todos from './todos';
+import plan from './plan';
 
 const rootReducer = combineReducers({
-    todos
+    plan
 });
 
 export default rootReducer;

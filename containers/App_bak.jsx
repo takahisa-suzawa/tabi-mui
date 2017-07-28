@@ -1,12 +1,9 @@
 import React, { Component, PropTypes } from "react";
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
-import * as PlanActions from '../actions/plans';
-
-import HeaderBar from './HeaderBar';
-import PlanList from '../components/PlanList';
-import PlanEditor from './PlanEditor';
+import Header from '../components/Header';
+import MainSection from '../components/MainSection';
+import * as TodoActions from '../actions/todos';
 
 // For Customization Options, edit  or use
 // './src/material_ui_raw_theme_file.jsx' as a template.
@@ -20,37 +17,29 @@ class App extends Component {
       <div>
         <MuiThemeProvider muiTheme={theme}>
           <div>
-            <HeaderBar/>
-            <section className="main">
-              {(() => {
-                return this.props.newEntryDisplay === true ? <PlanEditor/> : null;
-              })()}
-              {(() => {
-                return this.props.planListDisplay === true ? <PlanList/> : null;
-              })()}
-            </section>
+            <Header addTodo={actions.addTodo}/>
+            <MainSection todos={todos} actions={actions}/>
           </div>
         </MuiThemeProvider>
       </div>
     );
   }
 }
-/*
+
 App.propTypes = {
   todos: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired
 };
-*/
+
 function mapStateToProps(state) {
   return {
-    newEntryDisplay: state.plan.newEntryDisplay,
-    planListDisplay: state.plan.planListDisplay
+    todos: state.todos
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(PlanActions, dispatch)
+    actions: bindActionCreators(TodoActions, dispatch)
   };
 }
 
@@ -58,4 +47,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
-
