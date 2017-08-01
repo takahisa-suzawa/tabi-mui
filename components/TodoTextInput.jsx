@@ -45,6 +45,7 @@ class TodoTextInput extends Component {
                    id='new-todo-input'
                    style={defaultStyle}
                    type="text"
+                   floatingLabelText={this.props.label}
                    hintText={this.props.placeholder}
                    autoFocus="true"
                    value={this.state.text}
@@ -59,6 +60,7 @@ class TodoTextInput extends Component {
 TodoTextInput.propTypes = {
   onSave: PropTypes.func.isRequired,
   text: PropTypes.string,
+  label: PropTypes.string,
   placeholder: PropTypes.string,
   editing: PropTypes.bool,
   newTodo: PropTypes.bool

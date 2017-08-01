@@ -3,7 +3,8 @@ import todos from './todos';
 import plan from './plan';
 
 const rootReducer = combineReducers({
-    plan
+    plan,
+    todos
 });
 
 export default rootReducer;

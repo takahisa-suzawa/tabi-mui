@@ -5,7 +5,7 @@ import { PLANS } from '../constants/Plans';
 
 const styles = {
   list:{
-    margin: '10px auto',
+    margin: '10px',
     width: '100%'
   },
   flexContainer: {
@@ -16,6 +16,7 @@ const styles = {
     minWidth: '500px'
 　},
   search: {
+    marginLeft: '2px',
     width: '350px'
   }
 };

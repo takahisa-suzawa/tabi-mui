@@ -15,7 +15,7 @@ const TODO_FILTERS = {
   [SHOW_COMPLETED]: todo => todo.completed
 };
 
-class MainSection extends Component {
+class TodoList extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = { filter: SHOW_ALL };
@@ -85,9 +85,9 @@ class MainSection extends Component {
   }
 }
 
-MainSection.propTypes = {
+TodoList.propTypes = {
   todos: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired
 };
 
-export default MainSection;
+export default TodoList;
